@@ -16,7 +16,6 @@ public class SpringCorePropertiesApplication {
 
 		try (AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(
 				SpringCorePropertiesApplication.class)) {
-
 			SomeExternalService service = applicationContext.getBean(SomeExternalService.class);
 			System.out.println(service.returnServiceURL());
 		}

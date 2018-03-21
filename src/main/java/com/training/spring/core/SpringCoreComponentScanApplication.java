@@ -14,7 +14,7 @@ import com.training.spring.core.componentscan.ComponentDAO;
 public class SpringCoreComponentScanApplication {
 
 	private static Logger LOGGER = LoggerFactory.getLogger(SpringCoreComponentScanApplication.class);
-
+	
 	public static void main(String[] args) {
 
 		try (AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(
@@ -25,4 +25,5 @@ public class SpringCoreComponentScanApplication {
 			LOGGER.info("JDBC COMPONENT:  - {}", componentDAO.getJdbcConnection());
 		}
 	}
+	
 }

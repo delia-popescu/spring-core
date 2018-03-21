@@ -6,13 +6,13 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class ComponentDAO {
 
-	@Autowired
 	ComponentJdbcConnection jdbcConnection;
-
+	
 	public ComponentJdbcConnection getJdbcConnection() {
-		return jdbcConnection;
+		return jdbcConnection; 
 	}
 
+	@Autowired
 	public void setComponentJdbcConnection(ComponentJdbcConnection jdbcConnection) {
 		this.jdbcConnection = jdbcConnection;
 	}
