@@ -1,0 +1,32 @@
+package com.training.spring.core;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+import com.training.spring.core.basic.BinarySearchImpl;
+
+@Configuration
+@ComponentScan
+public class SpringCoreBasicApplication {
+
+	public static void main(String[] args) {
+
+		try (AnnotationConfigApplicationContext applicationContext = 
+				new AnnotationConfigApplicationContext(
+				SpringCoreBasicApplication.class)) {
+
+			BinarySearchImpl binarySearch = 
+					applicationContext.getBean(BinarySearchImpl.class);
+
+			BinarySearchImpl binarySearch1 = 
+					applicationContext.getBean(BinarySearchImpl.class);
+
+			System.out.println(binarySearch);
+			System.out.println(binarySearch1);
+
+			int result = binarySearch.binarySearch(new int[] { 12, 4, 6 }, 3);
+			System.out.println("Result: " + result);
+		}
+	}
+}
