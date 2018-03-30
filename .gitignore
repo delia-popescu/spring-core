@@ -1,4 +1,6 @@
 .idea/
+.idea/libraries
+.mvn/wrapper
 out/
 target/
 

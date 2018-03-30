@@ -1,4 +1,4 @@
-/home/delia/trainings/spring-core/src/test/java/com/training/spring/core/SpringIn5StepsBasicApplicationTests.java
-/home/delia/trainings/spring-core/src/test/java/com/training/spring/core/cdi/SomeCdiBusinessTest.java
-/home/delia/trainings/spring-core/src/test/java/com/training/spring/core/basic/BinarySearchTest.java
-/home/delia/trainings/spring-core/src/test/java/com/training/spring/core/basic/BinarySearchXMLConfigurationTest.java
+/home/delia/Work/traininings/spring-core/src/test/java/com/training/spring/core/SpringCoreBasicApplicationTests.java
+/home/delia/Work/traininings/spring-core/src/test/java/com/training/spring/core/basic/BinarySearchXMLConfigurationTest.java
+/home/delia/Work/traininings/spring-core/src/test/java/com/training/spring/core/basic/BinarySearchTest.java
+/home/delia/Work/traininings/spring-core/src/test/java/com/training/spring/core/cdi/SomeCdiBusinessTest.java
