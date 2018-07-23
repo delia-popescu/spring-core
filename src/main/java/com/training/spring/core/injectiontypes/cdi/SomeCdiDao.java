@@ -1,4 +1,4 @@
-package com.training.spring.core.cdi;
+package com.training.spring.core.injectiontypes.cdi;
 
 import javax.inject.Named;
 

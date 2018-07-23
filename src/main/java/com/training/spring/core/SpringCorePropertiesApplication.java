@@ -7,6 +7,8 @@ import org.springframework.context.annotation.PropertySource;
 
 import com.training.spring.core.properties.SomeExternalService;
 
+import java.util.Arrays;
+
 @Configuration
 @ComponentScan
 @PropertySource("classpath:app.properties")
@@ -18,6 +20,8 @@ public class SpringCorePropertiesApplication {
 				SpringCorePropertiesApplication.class)) {
 			SomeExternalService service = applicationContext.getBean(SomeExternalService.class);
 			System.out.println(service.returnServiceURL());
+			System.out.println(service.getInexistentProperty());
+			System.out.println(Arrays.asList(service.getValuesList()));
 		}
 	}
 }

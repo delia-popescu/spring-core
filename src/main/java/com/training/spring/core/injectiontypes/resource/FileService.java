@@ -1,4 +1,4 @@
-package com.training.spring.core.resource;
+package com.training.spring.core.injectiontypes.resource;
 
 import java.io.File;
 
@@ -12,7 +12,7 @@ public class FileService {
 	@Resource(name = "namedFile")
 	private  File file;
 
-	
+
 	private  File defaultFile;
 
 	public File getFile() {

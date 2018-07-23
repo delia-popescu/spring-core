@@ -1,26 +1,22 @@
 package com.training.spring.core;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.training.spring.core.dependencyinjection.xml.XmlComponentDAO;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.training.spring.core.xml.XmlPersonDAO;
 
 public class SpringCoreXMLContextApplication {
-
-	private static Logger LOGGER = LoggerFactory.getLogger(SpringCoreScopeApplication.class);
 
 	public static void main(String[] args) {
 
 		try (ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext(
 				"applicationContext.xml")) {
 
-			LOGGER.info("Beans Loaded -> {}", (Object) applicationContext.getBeanDefinitionNames());
+			System.out.println(applicationContext.getBeanDefinitionNames());
 
-			XmlPersonDAO personDao = applicationContext.getBean(XmlPersonDAO.class);
+			XmlComponentDAO componentDAO = applicationContext.getBean(XmlComponentDAO.class);
 
-			LOGGER.info("Person DAO :  - {}", personDao);
-			LOGGER.info("JDBC connection :  - {}", personDao.getXmlJdbcConnection());
+			System.out.println(componentDAO);
+			System.out.println(componentDAO.getXmlJdbcConnection());
 		}
 	}
 }

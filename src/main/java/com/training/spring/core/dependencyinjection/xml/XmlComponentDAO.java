@@ -1,8 +1,8 @@
-package com.training.spring.core.xml;
+package com.training.spring.core.dependencyinjection.xml;
 
-public class XmlPersonDAO {
+public class XmlComponentDAO {
 
-	XmlJdbcConnection xmlJdbcConnection;
+	private XmlJdbcConnection xmlJdbcConnection;
 
 	public XmlJdbcConnection getXmlJdbcConnection() {
 		return xmlJdbcConnection;

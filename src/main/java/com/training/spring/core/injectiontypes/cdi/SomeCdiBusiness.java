@@ -1,4 +1,4 @@
-package com.training.spring.core.cdi;
+package com.training.spring.core.injectiontypes.cdi;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -7,14 +7,19 @@ import javax.inject.Named;
 public class SomeCdiBusiness {
 
 	@Inject
-	SomeCdiDao someCdiDao;
+    SomeCdiDao someCdiDao;
 
-	public SomeCdiDao getSomeCDIDAO() {
+	@Inject
+	@Named("someCdiDao2")
+//	@Qualifier("someCdiDao2")
+            SomeCdiDao2 cdiDao;
+
+	public SomeCdiDao getSomeCdiDao() {
 		return someCdiDao;
 	}
 
-	public void setSomeCDIDAO(SomeCdiDao someCdiDao) {
-		this.someCdiDao = someCdiDao;
+	public SomeCdiDao2 getCdiDao() {
+		return cdiDao;
 	}
 
 	public int findGreatest() {
